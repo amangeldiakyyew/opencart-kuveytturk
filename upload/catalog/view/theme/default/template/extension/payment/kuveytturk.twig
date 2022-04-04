@@ -1,0 +1,130 @@
+<style type="text/css">
+    .qnb-submit-btn {
+        padding: 10px 100px;
+        text-shadow: 1px 1px 2px #665e64;
+    }
+
+    .cc_container {
+        width: 100%;
+        position: relative;
+    }
+
+    .cc_card {
+        background-color: #9BA7B2;
+        display: block;
+        padding: 20px 30px;
+        border-radius: 15px;
+        max-width: 100%;
+        -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+        border: 1px solid grey;
+        background: -o-linear-gradient(215deg, #1D3349, #06121E 55%);
+        background: linear-gradient(-125deg, #1D3349, #06121E 55%);
+    }
+
+    .cc_total {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        opacity: 0.9;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .cc_input {
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 7px 15px;
+        opacity: 0.9;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border: none !important;
+        border-radius: 5px !important;
+    }
+
+    .cc_input.cc_month, .cc_input.cc_year, .cc_input.cc_ccv {
+        width: 100px;
+    }
+
+    .cc_owner, .cc_number {
+        width: 100%;
+    }
+
+    .cc_card label {
+        font-size: 1rem;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 5px !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .cc_card_input_block {
+        margin-bottom: 15px;
+    }
+</style>
+<div id="kuveytturk_form_container">
+    <div class="row">
+        <div class="col-md-3 col-12"></div>
+        <div class="col-md-6 col-12">
+            <form action="index.php?route=extension/payment/kuveytturk/pay" method="post" id="kuveytturk_card_form">
+                <div class="" style="margin-top: 20px;max-width: 500px;width: 100%">
+                    <div class="cc_card" style="margin-bottom: 20px">
+                        <div class="cc_card_input_block row">
+                            <label>
+                                Kart No
+                            </label>
+                            <input type="text" name="CardNumber" class="cc_input cc_number" placeholder="**** **** **** ****" required>
+                        </div>
+                        <div class="cc_card_input_block row">
+                            <label>
+                                Kart Üzerindeki İsim
+                            </label>
+                            <input type="text" name="CardHolderName" class="cc_input cc_owner" placeholder="Kart Üzerindeki İsim" required>
+                        </div>
+                        <div class="row mx-0 justify-content-between">
+                            <div class="cc_card_input_block">
+                                <label class="d-block">
+                                    Son Kul. Tar.
+                                </label>
+                                <input type="number" name="CardExpireDateMonth" class="cc_input cc_month" placeholder="Ay" required>
+                                <input type="number" name="CardExpireDateYear" class="cc_input cc_year" placeholder="Yıl" required>
+                            </div>
+                            <div class="cc_card_input_block">
+                                <label class="d-block">
+                                    CVC kodu
+                                </label>
+                                <input type="number" name="CardCVV2" class="cc_input cc_ccv" placeholder="***" required>
+                            </div>
+                        </div>
+                    </div>
+                    <center>
+                        <button type="submit" class="qnb-submit-btn btn btn-primary" style="padding:10px 80px;">Kredi Kartıyla Öde</button>
+                    </center>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*var $pm=$('[name="payment_method"]:checked');
+        var $qnbfinansbank_card_form=$('#qnbfinansbank_card_form');
+        var $mainConfirmButton=$('#journal-checkout-confirm-button');
+        function togglQBNForm(){
+            console.log($pm.val());
+            if($pm.val()=='kuveytturk'){
+                $mainConfirmButton.hide();
+                $qnbfinansbank_card_form.show();
+            }else{
+                $mainConfirmButton.show();
+                $qnbfinansbank_card_form.hide();
+            }
+        }
+        togglQBNForm();
+        $pm.on('change',function(){
+            togglQBNForm();
+        })*/
+    });
+</script>
